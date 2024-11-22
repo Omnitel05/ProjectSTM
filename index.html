@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sondaggio</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" type="text/css" href="checkbox.css">
+    <link rel="stylesheet" type="text/css" href="generale.css">
+    
+</head>
+<body>
+    <h1>Anziani e nuove tecnologie</h1>
+    <h2>Progetto di Thomas Minatel&Co</h2>
+
+    
+    <div id="RispMult">
+
+        <h3>A che fascia di età appartiene?</h3>
+        <form>
+            <input type="checkbox" id="opt1" name="Range1" value="60-65">
+            <label for="opt1">Dai 60 ai 65</label><br>
+            <input type="checkbox" id="opt2" name="Range2" value="65-70">
+            <label for="opt2">Dai 65 ai 70</label><br>
+            <input type="checkbox" id="opt3" name="Range3" value="70-80">
+            <label for="opt3">Dai 70 agli 80</label><br>
+            <input type="checkbox" id="opt4" name="Range4" value="80-90">
+            <label for="opt4">Dagli 80 ai 90</label><br><br>
+            
+            <input id="button" type="submit" value="Invio" onclick="saveData()">
+        </form>
+    </div>
+
+    <div id="RispMultSingOpt">
+        
+        <h3>A che fascia di età appartiene?</h3>
+
+        <input type="radio" id="opt1" name="Opt" value="60-65">
+        <label for="Opt">Dai 60 ai 65</label><br>
+        <input type="radio" id="opt2" name="Opt" value="65-70">
+        <label for="Opt">Dai 65 ai 70</label><br>
+        <input type="radio" id="opt3" name="Opt" value="70-80">
+        <label for="Opt">Dai 70 agli 80</label><br>
+        <input type="radio" id="opt4" name="Opt" value="80-90">
+        <label for="Opt">Dagli 80 ai 90</label><br><br>
+        
+        <button id="button" onclick="submitForm()">Invia</button>
+    
+    </div>
+<script>
+    function submitForm() { 
+        const selectedOpt = document.querySelector('input[name="Opt"]:checked'); 
+        if (selectedOpt) { 
+            alert("Hai selezionato: " + selectedOpt.value); 
+        } else { 
+            alert("Per favore, seleziona un'opzione."); 
+        } 
+    }
+</script>
+</body>
+</html>
